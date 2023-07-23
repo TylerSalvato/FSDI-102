@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .input-control{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" class="input-control" placeholder="Add product's name">
+        <input type="text" class="input-control" placeholder="Add a description" disabled>
+        <input type="number" class="input-control" placeholder="Add the price">
+        Select the color of your product:
+        <input type="color" class="input-control" required>
+        <label>Select the payment method: </label>
+        <select>
+        <option value="option 1">-- Cash --</option>
+        <option value="option 2">-- Option 2 --</option>
+        <option value="option 3">-- Option 3 --</option>
+    </select>
+    <button>Add</button>
+    <input type="password" class="input-control" required>
+    <input type="date" class="input-control" disabled> 
+    </form>
+</body>
+</html>
