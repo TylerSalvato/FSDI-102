@@ -23,9 +23,22 @@ img{
 /*utilities*/
 
 .container{
-    width: 70%;
+    width: 70%; /*desktop view*/
     margin-left: auto;
     margin-right: auto;
+}
+@media(max-width:768px){
+    .container{
+        width: 90%; /*mobile view*/
+    }
+}
+
+
+.two-columns{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 300px;
+
 }
 
 /*header*/
@@ -56,11 +69,43 @@ img{
     color: white;
 }
 
+/*mobile menu*/
+.mobile-menu{
+    display: none; /*desktop view*/
+
+}
+.bars{
+    width: 20px;
+}
+@media(max-width:768px){
+    /*mobile view*/
+
+    .mobile-menu{
+        display: block; 
+    }
+    nav#navigation{
+        display: none;
+        
+    }
+
+}
+
+#navigation:target{
+    display: block;
+    display: flex;
+        flex-direction: column;
+}
+
 /*about-us-container*/
 
 .about-us-container{
     display: flex;
     max-width: 100%;
+}
+@media(max-width:768px){
+    .about-us-container{
+        flex-direction: column;
+    }
 }
 .about-item{
     padding: 10px;
@@ -99,6 +144,11 @@ img{
     display: flex;
     flex-direction: column;
     margin-right: 10px;
+}
+@media(max-width:768px){
+    .an-item{
+        margin-bottom: 10px;
+    }
 }
 .an-item-img{
     display: flex;
@@ -185,7 +235,7 @@ ul li{
     border-radius: 5px;
 }
 
-.form-control label, legend{
+label, legend{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 14px;
@@ -213,4 +263,20 @@ fieldset{
     font-size: 20px;
     margin: 20px auto;
 
+}
+
+/*About*/
+
+table,th,td{
+    font-family: arial;
+    border-bottom: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+th,td{
+    color: black;
+    background-color: rgb(212, 212, 225);
+    padding: 10px;
+    text-align: center;
 }
